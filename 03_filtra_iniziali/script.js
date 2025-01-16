@@ -4,10 +4,19 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 
 // Dichiara la funzione qui.
-
+function parolePerLettera (array, lettera ){
+   newArray = []
+    for (let i = 0; i < array.length; i++) {
+        if ( array[i].charAt(0).toLowerCase() === lettera.toLowerCase()){
+            newArray.push(array[i])
+        }
+    }
+    console.log(newArray) 
+    
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 
-
+parolePerLettera( names, 'A' )
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
